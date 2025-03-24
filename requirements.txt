@@ -166,7 +166,6 @@ pyttsx3==2.90
 pytweening==1.2.0
 pytz==2024.1
 pyunormalize==15.1.0
-pywin32==310
 pywinpty==2.0.15
 PyYAML==6.0.2
 pyzmq==26.3.0
