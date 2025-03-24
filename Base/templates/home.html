@@ -1,0 +1,315 @@
+{% load static%}
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.jpeg">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>`
+    
+    <!-- Navbar Section -->
+    <nav id="navbar" class="flex s-around bg-color">
+        <div class="left-nav">
+            <h2 class="t-white"><b>🚀 Explore My Creations</b></h2>
+        </div>
+        <div class="right-nav">
+            <ul class="flex">
+                <li><a href="#home" class="t-white roboto">Home <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#about" class="t-white roboto">About Me <i class="fa-solid fa-user"></i></a></li>
+                <li><a href="#skills" class="t-white roboto">Skills <i class="fa-solid fa-code"></i></a></li>
+                <li><a href="#Projects" class="t-white roboto">Projects <i class="fas fa-project-diagram"></i></a></li>
+                <li><a href="#Experience" class="t-white roboto">Experience <i class="fa-solid fa-briefcase"></i></a></li>
+                <li><a href="#Contact" class="t-white roboto">Contact <i class="fa-solid fa-rocket"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+{% endif %}
+  
+    <!-- Home Section -->
+    <section id="home" class="flex s-around sw-80 m-auto">
+        <div class="home-left flex items-center">
+            <div class="home-content">
+                <h6 class="poppinss">Hi, I'm</h6>
+                <h1 class="t-white">Maroof shaikh</h1>
+                <h4 class="poppinss">Software Engineer</h4>
+                <a href="{% static 'pdf/Maroofshaikh.pdf' %}"  target="_blank">
+                    <button class="btn poppins">Resume</button></a>
+                    
+                <a class="btn live poppins" id="hireme" href="mailto:marufshaikh65515@gmail.com""
+                    target="_blank">Let's Talk</a>
+            </div>
+        </div>
+        <div class="home-right flex s-center items-center">
+            <div class="circle flex s-center items-center" id="mainImage">
+               
+                <img src="{% static 'images/img3.jpg'%}" alt="image">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1 class="t-center my-2 t-white f-2"><u><b>About Me</b></u></h1>
+        <div class="about-container flex s-around ">
+            <div class=" about-left flex s-center items-center">
+                <!-- Here in src replade the given link with your secondary image link -->
+                <img src="{%static 'images/dog.png'%}" alt="" style="width: 60%;">
+            </div>
+
+            <div class="about-right flex">
+                <div class="about-content">
+                    <h1 class="t-white m-b-1 poppins">Maroof Shaikh</h1>
+                    <p class="t-white poppins">
+                        "Hey there! I’m Maroof Shaikh, an aspiring software engineer who loves turning coffee into code and ideas into reality. Whether it’s building sleek web apps, debugging the ‘unsolvable’ bugs, or diving into AI-powered innovations, I’m always up for a challenge. I’m fascinated by how artificial intelligence is shaping the future, and I love exploring ways to integrate AI into real-world applications. I believe that learning never stops, and every error message is just a puzzle waiting to be solved. When I’m not glued to my screen, you’ll find me exploring new places, capturing moments through photography, or geeking out over the latest tech trends. Let’s create something awesome!".</p>
+                    <a class="btn " id="hireme"
+                        href=""https://wa.me/8355909768"">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h1 class="t-center my-2 t-white f-2"><u><b>Skills</b></u></h1>
+        <div class="services-container flex s-around h-50">
+        <div class=" skills-left flex s-center items-center">
+            <img src="{%static 'images/pro.png'%}" alt="">
+        </div>
+
+        <div class="skills-right flex items-center">
+            <div class="skillss-container">
+<!-- Programming Languages -->
+                    <h3 class="skill-category t-white">Programming Languages</h3>
+                    <div class="python bar p-relative"><span class="bar-content left t-white">Python</span><span
+                            class="bar-content right-skills t-white">85%</span></div>
+                    <div class="javascript bar p-relative"><span class="bar-content left t-white">JavaScript</span><span
+                            class="bar-content right-skills t-white">50%</span></div>
+                    <div class="html bar p-relative"><span class="bar-content left t-white">HTML</span><span
+                            class="bar-content right-skills t-white">85%</span></div>
+                    <div class="css bar p-relative"><span class="bar-content left t-white">CSS</span><span
+                            class="bar-content right-skills t-white">85%</span></div>
+    
+                    <!-- Frameworks -->
+                    <h3 class="skill-category t-white">Frameworks</h3>
+                    <div class="django bar p-relative"><span class="bar-content left t-white">Django</span><span
+                            class="bar-content right-skills t-white">80%</span></div>
+                    <div class="restframework bar p-relative"><span class="bar-content left t-white">Django REST Framework</span><span
+                            class="bar-content right-skills t-white">50%</span></div>
+    
+                    <!-- Python Libraries -->
+                    <h3 class="skill-category t-white">Python Libraries</h3>
+                    <div class="numpy bar p-relative"><span class="bar-content left t-white">NumPy</span><span
+                            class="bar-content right-skills t-white">80%</span></div>
+                    <div class="pandas bar p-relative"><span class="bar-content left t-white">Pandas</span><span
+                            class="bar-content right-skills t-white">80%</span></div>
+                    <div class="matplotlib bar p-relative"><span class="bar-content left t-white">Matplotlib</span><span
+                            class="bar-content right-skills t-white">80%</span></div>
+                    <div class="seaborn bar p-relative"><span class="bar-content left t-white">Seaborn</span><span
+                            class="bar-content right-skills t-white">80%</span></div>
+    
+                    <!-- Databases -->
+                    <h3 class="skill-category t-white">Databases</h3>
+                    <div class="mysql bar p-relative"><span class="bar-content left t-white">MySQL</span><span
+                            class="bar-content right-skills t-white">80%</span></div>
+         
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+     <section id="Projects">
+        <h1 class="t-center my-2 t-white f-2"><u><b>Projects</b></u></h1>
+        <div class="projects-container flex s-center">
+    
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">DreamBook (Django App)</h1>
+                <p class="t-white poppins">
+                    A book cataloging and recommendation system built using Django. Features user authentication, book search, and personalized recommendations.
+                </p>
+                <div class="buttons flex s-around">
+                    <a href="https://github.com/Maroofshaikh/DREAM_BOOOK" target="_blanks" class="btn mx-1 m-top">GitHub</a>
+                </div>
+            </div>
+    
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">Epsilon AI</h1>
+                <p class="t-white poppins">
+                    A machine learning-based project focusing on predictive analytics and AI-driven insights. Implemented data preprocessing, model training, and performance evaluation.
+                </p>
+                <div class="buttons flex s-around">
+                    {% comment %} <a href="" target="_blanks" class="btn mx-1 m-top">GitHub</a> {% endcomment %}
+                    {% comment %} <a href="" target="_blanks" class="btn m-top live">Live Link</a> {% endcomment %}
+                </div>
+            </div>
+    
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">customer-churn-analysis </h1>
+                <p class="t-white poppins">
+                    Performed EDA on customer churn analysis using Python (Pandas, NumPy, Matplotlib), cleaned data, handled missing values, and visualized top-selling products and customer trends to identify key churn factors.
+                </p>
+                <div class="buttons flex s-around">
+                    <a href="https://github.com/Maroofshaikh/customer-churn-analysis" target="_blanks" class="btn mx-1 m-top">GitHub</a>
+                </div>
+            </div>
+    
+            <div class="projects-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">My Portfolio</h1>
+                <p class="t-white poppins">
+                    A personal portfolio website showcasing my skills, projects, and achievements. Built with HTML, CSS, and JavaScript, featuring a clean and minimalist design for easy navigation.
+                </p>
+                <div class="buttons flex s-around">
+                    <a href="" target="_blanks" class="btn mx-1 m-top">GitHub</a>
+                    <a href="#" target="_blanks" class="btn m-top live">Live Link</a>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+        <!-- Experience Section -->
+    <section id="Experience">
+        <h1 class="t-center my-2 t-white f-2"><u><b>Experience</b></u></h1>
+        <div class="experience-container flex s-center">
+    
+            <div class="experience-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">Software Engineer Intern - Oasis Infobyte(May 2023 - June 2023, Mumbai)</h1>
+                <p class="t-white poppins">
+
+                            Implemented responsive design principles across client websites using frameworks like Bootstrap and CSS Grid, increasing mobile user engagement by
+                            30%.
+                            Integrated automated testing processes using tools like Selenium, enhancing website reliability and efficiency by reducing bug-related downtime by 25%.
+                </p>
+            </div>
+    
+            <div class="experience-item flex f-col s-center items-center">
+                <h1 class="t-white poppins">Software Engineer Intern -Lets Grow More(April 2023 - May 2023, Mumbai) </h1>
+                <p class="t-white poppins">
+                    Improved client portfolios (UI/UX): +40% user retention, better feedback.
+                    Built responsive e-commerce (React/Node.js): +50% mobile engagement, +35% sales.
+                </p>
+            </div>
+    
+        </div>
+    </section>
+
+
+     <!-- Hobbies & Interests Section -->
+<section id="hobbies">
+    <h1>Hobbies & Interests</h1>
+    <div class="hobby-container">
+        <div class="hobby-card">
+            <h2>♟ Chess</h2>
+            <p>I love strategic thinking and improving my problem-solving skills.</p>
+        </div>
+        <div class="hobby-card">
+            <h2>🎮 Carrom</h2>
+            <p>A fun indoor game that sharpens my aiming and focus.</p>
+        </div>
+        <div class="hobby-card">
+            <h2>💻 Coding</h2>
+            <p>Experimenting with new frameworks and building side projects.</p>
+        </div>
+        <div class="hobby-card">
+            <h2>📚 Reading Books</h2>
+            <p>Exploring different genres to gain knowledge and relax.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Contact Me Section -->
+    <section id="Contact" class="m-b-1">
+        <h1 class=" t-center my-2 t-white f-2">Contact Me</h1>
+        <div class="contact-container flex s-around items-centers">
+            <div class="form" id="contactForm">
+                <form method="post" > 
+                    {% csrf_token %}
+                    <div class="name form-div">
+                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
+                    </div>
+
+                    <div class="email form-div">
+                        <input type="email" name="email" id="" class="poppins" placeholder="Enter Your Email"
+                            required>
+                    </div>
+
+                    <div class="phone form-div">
+                        <input type="phone" name="number" id="" class="poppins" placeholder="Enter Your Phone"
+                            required>
+                    </div>
+                    
+                    <div class="textarea form-div">
+                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins"
+                            placeholder="Enter Messages"></textarea>
+                    </div>
+                    <button type="submit" class="btn poppins" id="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+   
+
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <ul class="flex s-center w-80 m-auto my-2 res">
+            <li><a href="#home" class="poppinss">Home</a></li>
+            <li><a href="#about" class="poppinss">About</a></li>
+            <li><a href="#skills" class="poppinss">Skills</a></li>
+            <li><a href="#projects" class="poppinss">Projects</a></li>
+            <li><a href="#portfolio" class="poppinss">Portfolio</a></li>
+        </ul>
+        <ul class="flex s-center w-80 font-awesome ">
+            <a href="https://www.linkedin.com/in/maruf-shaikh-534b2b261/" target="_blank">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </a>
+            <a href="https://github.com/Maroofshaikh" target="_blank">
+                <li><i class="fa-brands fa-github"></i></li>
+            </a>
+                <a href="https://www.instagram.com/m_shaikh077/?hl=en" target="_blank">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+            </a>
+            
+        </ul>
+        <p class="t-center my-2 poppins">&copy; All Rights Reserved - <span class="cpy-white poppins">Error By Night 
+                </span></p>
+        <p class="t-center my-2 poppins">&copy; Reach to me anytime <span class="cpy-white poppins"> 8355909768
+                </span></p>
+
+    </footer>
+     
+</body> 
+
+<script>
+    // Auto-hide messages after 3 seconds
+    setTimeout(function() {
+        let alertMessages = document.querySelectorAll('.alert');
+        alertMessages.forEach(function(alert) {
+            alert.style.display = 'none';
+        });
+    }, 3000);
+</script>
+
+</html>
